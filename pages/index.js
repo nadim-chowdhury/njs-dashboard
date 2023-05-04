@@ -3,8 +3,12 @@ import Header from "@/components/Header";
 import PieChart from "@/components/PieChart";
 import TopCards from "@/components/TopCards";
 import Head from "next/head";
+import { auth } from "@/firebase";
+import { useAuthState } from "react-firebase-hooks/auth";
 
 export default function Home() {
+  const [user] = useAuthState(auth);
+
   return (
     <>
       <Head>
@@ -16,7 +20,6 @@ export default function Home() {
       <main className="bg-gray-100 h-screen">
         <Header />
         <TopCards />
-
         <div className="grid p-4 md:grid-cols-3 grid-cols-1 gap-4">
           <BarChart />
           <PieChart />

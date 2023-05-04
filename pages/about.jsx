@@ -1,5 +1,7 @@
 import Header from "@/components/Header";
+import Link from "next/link";
 import { Chart } from "react-google-charts";
+import { BsGithub, BsLinkedin, BsTwitter } from "react-icons/bs";
 
 export const data = [
   ["Country", "Popularity"],
@@ -19,10 +21,10 @@ export const data = [
 
 const about = () => {
   return (
-    <div className="bg-gray-100 h-screen p-4">
+    <div className="bg-gray-100 h-screen w-full">
       <Header />
 
-      <div className="w-full p-4 border rounded-lg bg-white">
+      <div className="p-4 border rounded-lg bg-white m-4">
         <div>
           <Chart
             chartEvents={[
@@ -45,9 +47,28 @@ const about = () => {
         </div>
 
         <div className="text-center mt-20">
-          <p>&copy;2023 All Rights Reserved by Nadim Chowdhury</p>
-          <p>https://github.com/Nadim-Chowdhury</p>
-          <p>https://www.linkedin.com/in/nadim-chowdhury</p>
+          <h3>&copy; 2023 All Rights Reserved By Nadim Chowdhury</h3>
+
+          <div className="flex justify-center">
+            <Link
+              href="https://www.linkedin.com/in/nadim-chowdhury"
+              className="text-xl p-2 text-gray-500 hover:text-blue-500 border-2 rounded-full"
+            >
+              <BsLinkedin />
+            </Link>
+            <Link
+              href="https://github.com/nadim-chowdhury"
+              className="text-xl p-2 text-gray-500 hover:text-blue-500 border-2 rounded-full"
+            >
+              <BsGithub />
+            </Link>
+            <Link
+              href="https://twitter.com/nadim_ch0wdhury"
+              className="text-xl p-2 text-gray-500 hover:text-blue-500 border-2 rounded-full"
+            >
+              <BsTwitter />
+            </Link>
+          </div>
         </div>
       </div>
     </div>
