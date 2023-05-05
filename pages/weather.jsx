@@ -68,13 +68,13 @@ export default function Weather() {
           <div className="">
             <div className="flex">
               <p className="w-1/2">
-                <span className="bg-blue-100 px-2 rounded-tl-md rounded-br-lg block my-1 mr-1">
+                <span className="bg-blue-100 px-2 rounded-tl-md rounded-br-lg block my-1 mr-2">
                   Lat:{" "}
                 </span>
                 {city.name ? city.coord?.lat : "No info"}
               </p>
               <p className="w-1/2">
-                <span className="bg-blue-100 px-2 rounded-tl-md rounded-br-lg block my-1 ml-1">
+                <span className="bg-blue-100 px-2 rounded-tl-md rounded-br-lg block my-1">
                   Lon:{" "}
                 </span>
                 {city.name ? city.coord?.lon : "No info"}
