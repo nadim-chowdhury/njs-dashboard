@@ -64,7 +64,7 @@ export default function Weather() {
           ) : (
             <h3 className="text-3xl font-bold mb-2">Search any city</h3>
           )}
-          this
+          
           <div className="">
             <div className="flex">
               <p className="w-1/2">
