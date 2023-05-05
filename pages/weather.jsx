@@ -64,31 +64,27 @@ export default function Weather() {
           ) : (
             <h3 className="text-3xl font-bold mb-2">Search any city</h3>
           )}
-
+          this
           <div className="">
             <div className="flex">
               <p className="w-1/2">
                 <span className="bg-blue-100 px-2 rounded-tl-md rounded-br-lg block my-1 mr-1">
                   Lat:{" "}
                 </span>
-                {city.name
-                  ? city.coord?.lat
-                  : "Search any city for weather info"}
+                {city.name ? city.coord?.lat : "No info"}
               </p>
               <p className="w-1/2">
                 <span className="bg-blue-100 px-2 rounded-tl-md rounded-br-lg block my-1 ml-1">
                   Lon:{" "}
                 </span>
-                {city.name
-                  ? city.coord?.lon
-                  : "Search any city for weather info"}
+                {city.name ? city.coord?.lon : "No info"}
               </p>
             </div>
             <p>
               <span className="bg-blue-100 px-2 rounded-tl-md rounded-br-lg block my-1">
                 Temp:
               </span>{" "}
-              {city.name ? city.main?.temp : "Search any city for weather info"}
+              {city.name ? city.main?.temp : "Search any city for this info"}
             </p>
             <p>
               <span className="bg-blue-100 px-2 rounded-tl-md rounded-br-lg block my-1">
@@ -96,7 +92,7 @@ export default function Weather() {
               </span>{" "}
               {city.name
                 ? city.main?.feels_like
-                : "Search any city for weather info"}
+                : "Search any city for this info"}
             </p>
             <p>
               <span className="bg-blue-100 px-2 rounded-tl-md rounded-br-lg block my-1">
@@ -104,7 +100,7 @@ export default function Weather() {
               </span>
               {city.name
                 ? city.main?.pressure
-                : "Search any city for weather info"}
+                : "Search any city for this info"}
             </p>
             <p>
               <span className="bg-blue-100 px-2 rounded-tl-md rounded-br-lg block my-1">
@@ -112,7 +108,7 @@ export default function Weather() {
               </span>
               {city.name
                 ? city.main?.humidity
-                : "Search any city for weather info"}
+                : "Search any city for this info"}
             </p>
             <p>
               <span className="bg-blue-100 px-2 rounded-tl-md rounded-br-lg block my-1">
@@ -120,29 +116,25 @@ export default function Weather() {
               </span>
               {city.name
                 ? city.weather?.[0]?.main
-                : "Search any city for weather info"}
+                : "Search any city for this info"}
             </p>
             <p>
               <span className="bg-blue-100 px-2 rounded-tl-md rounded-br-lg block my-1">
                 Visibility:
               </span>{" "}
-              {city.name ? city.visibility : "Search any city for weather info"}
+              {city.name ? city.visibility : "Search any city for this info"}
             </p>
             <p>
               <span className="bg-blue-100 px-2 rounded-tl-md rounded-br-lg block my-1">
                 Sunrise:{" "}
               </span>
-              {city.name
-                ? city.sys?.sunrise
-                : "Search any city for weather info"}
+              {city.name ? city.sys?.sunrise : "Search any city for this info"}
             </p>
             <p>
               <span className="bg-blue-100 px-2 rounded-tl-md rounded-br-lg block my-1">
                 Sunset:{" "}
               </span>
-              {city.name
-                ? city.sys?.sunset
-                : "Search any city for weather info"}
+              {city.name ? city.sys?.sunset : "Search any city for this info"}
             </p>
           </div>
         </div>
