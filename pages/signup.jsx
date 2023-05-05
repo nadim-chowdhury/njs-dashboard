@@ -14,10 +14,8 @@ const Signup = () => {
     useCreateUserWithEmailAndPassword(auth);
   const [user] = useAuthState(auth);
 
-  // console.log(email, name, password);
-
   return (
-    <section className="text-gray-600 body-font relative">
+    <section className="text-gray-600 body-font relative bg-white border-l">
       <div className="container px-5 py-24 mx-auto h-screen flex items-center justify-center">
         {user ? (
           <h2 className="text-2xl font-bold text-blue-500">
@@ -30,7 +28,7 @@ const Signup = () => {
             </Link>
           </h2>
         ) : (
-          <div className="w-80 bg-white flex flex-col mt-8">
+          <div className="w-80 flex flex-col mt-8">
             <h2 className="text-white text-center text-xl bg-blue-500 border-0 py-2 px-6 mb-4 rounded-tl-lg rounded-br-lg">
               Signup Here
             </h2>

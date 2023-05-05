@@ -12,7 +12,7 @@ const Sidebar = ({ children }) => {
 
   return (
     <div className="flex">
-      <div className="flex flex-col justify-between h-screen p-4 bg-white border-r fixed top-0 left-0">
+      <div className="flex flex-col justify-between h-screen p-4 bg-white border fixed top-0 left-0">
         <Link
           href="/"
           className="text-xl font-bold text-center bg-blue-500 text-white rounded-tl-lg rounded-br-lg p-2"

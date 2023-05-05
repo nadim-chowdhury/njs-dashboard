@@ -14,11 +14,9 @@ const Login = () => {
   const [signInWithGoogle] = useSignInWithGoogle(auth);
   const [user] = useAuthState(auth);
 
-  // console.log(email, password);
-
   return (
-    <section className="text-gray-600 body-font relative">
-      <div className="container px-5 mx-auto h-screen flex flex-col items-center justify-center">
+    <section className="text-gray-600 body-font relative bg-white border-l">
+      <div className="container px-5 mx-auto h-screen flex flex-col items-center  justify-center">
         {user ? (
           <h2 className="text-2xl font-bold text-blue-500">
             Login Successful &nbsp;
