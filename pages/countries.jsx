@@ -21,15 +21,15 @@ function Countries() {
       <div className="m-4 flex items-center">
         <input
           type="text"
-          className="rounded-lg p-2 border w-auto border-blue-500 focus:outline-blue-400"
+          className="rounded-lg p-3 border w-auto focus:outline-blue-400"
           onChange={(e) => setQuery(e.target.value)}
         />
-        <button className="bg-blue-500 text-white p-3 rounded-lg ml-2">
+        <button className="bg-blue-500 text-white p-4 rounded-lg ml-2">
           <BsSearch />
         </button>
       </div>
 
-      <div className="flex flex-wrap justify-center items-center m-4 p-4 bg-white rounded-lg border">
+      <div className="grid grid-cols-2 sm:grid-cols-4 md:grid-cols-8">
         {countries
           .filter((i) =>
             query.toLowerCase() === ""
@@ -37,10 +37,12 @@ function Countries() {
               : i.name.common.toLowerCase().includes(query)
           )
           .map((c) => (
-            <div key={c.id} className="countries m-4 border-2 rounded-b-lg">
-              <Image src={c.flags.png} alt="" width={160} height={90} />
-              <div className="bg-gray-100 text-center p-2">
-                <h4 className="font-bold my-2 text-xl">
+            <div key={c.id} className="border bg-white rounded-lg m-4">
+              <div className="countries pt-2">
+                <Image src={c.flags.png} alt="" width={160} height={90} />
+              </div>
+              <div className="text-center py-2">
+                <h4 className="font-bold text-xl bg-blue-100 py-1">
                   {c.name.common.slice(0, 12)}
                 </h4>
                 <h5>Region: {c.region}</h5>

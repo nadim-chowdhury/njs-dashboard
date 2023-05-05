@@ -5,6 +5,9 @@ import TopCards from "@/components/TopCards";
 import Head from "next/head";
 import { auth } from "@/firebase";
 import { useAuthState } from "react-firebase-hooks/auth";
+import LineChart from "@/components/LineChart";
+import ScatterChart from "@/components/ScatterChart";
+import { SteppedArea } from "@/components/SteppedArea";
 
 export default function Home() {
   const [user] = useAuthState(auth);
@@ -17,12 +20,15 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <main className="bg-gray-100 h-screen">
+      <main className="bg-gray-100 pb-4">
         <Header />
         <TopCards />
         <div className="grid p-4 md:grid-cols-3 grid-cols-1 gap-4">
           <BarChart />
           <PieChart />
+          <SteppedArea />
+          <ScatterChart />
+          <LineChart />
         </div>
       </main>
     </>

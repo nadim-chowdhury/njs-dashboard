@@ -1,15 +1,29 @@
 import Header from "@/components/Header";
-import { BsPersonFill, BsThreeDotsVertical } from "react-icons/bs";
+import { BsPersonFill, BsSearch, BsThreeDotsVertical } from "react-icons/bs";
 import { data } from "@/data/Data";
+import { useState } from "react";
 
-const customers = () => {
+const Customers = () => {
+  const [query, setQuery] = useState("");
+
   return (
-    <div className="bg-gray-100 h-screen">
+    <div className="bg-gray-100 h-full pb-4">
       <Header />
+
+      <div className="m-4 flex items-center">
+        <input
+          type="text"
+          className="rounded-lg p-3 border w-auto focus:outline-blue-400"
+          onChange={(e) => setQuery(e.target.value)}
+        />
+        <button className="bg-blue-500 text-white p-4 rounded-lg ml-2">
+          <BsSearch />
+        </button>
+      </div>
 
       <div className="p-4">
         <div className="w-full m-auto p-4 border rounded-lg bg-white overflow-y-auto">
-          <div className="my-3 p-2 grid md:grid-cols-4 sm:grid-cols-3 grid-cols-2 justify-between items-center cursor-pointer bg-slate-200 pl-4 rounded-lg font-semibold">
+          <div className="my-3 p-2 grid md:grid-cols-4 sm:grid-cols-3 grid-cols-2 justify-between items-center cursor-pointer bg-blue-200 pl-4 rounded-lg font-semibold">
             <p>Name</p>
             <p className="sm:text-left text-right">Email</p>
             <p className="hidden md:grid">Last Order</p>
@@ -17,28 +31,34 @@ const customers = () => {
           </div>
 
           <ul>
-            {data.map((o) => {
-              return (
-                <li
-                  key={o.id}
-                  className="hover:bg-gray-100 rounded-lg my-3 p-2 grid md:grid-cols-4 sm:grid-cols-3 grid-cols-2 items-center justify-between cursor-pointer"
-                >
-                  <div className="flex items-center">
-                    <div className="bg-blue-100 p-3 rounded-lg">
-                      <BsPersonFill className="text-blue-500" />
+            {data
+              .filter((i) =>
+                query.toLowerCase() === ""
+                  ? data
+                  : i.name.first.toLowerCase().includes(query)
+              )
+              .map((o) => {
+                return (
+                  <li
+                    key={o.id}
+                    className="hover:bg-gray-100 rounded-lg my-3 p-2 grid md:grid-cols-4 sm:grid-cols-3 grid-cols-2 items-center justify-between cursor-pointer"
+                  >
+                    <div className="flex items-center">
+                      <div className="bg-blue-100 p-3 rounded-lg">
+                        <BsPersonFill className="text-blue-500" />
+                      </div>
+                      <p className="ml-4">{o.name.first + " " + o.name.last}</p>
                     </div>
-                    <p className="ml-4">{o.name.first + " " + o.name.last}</p>
-                  </div>
-                  <p className="text-gray-600 ml-2 sm:text-left text-right">{`${o.name.first.toLowerCase()}${o.name.last.toLowerCase()}@gmail.com`}</p>
-                  <p className="text-gray-600 ml-1">{o.date}</p>
+                    <p className="text-gray-600 ml-2 sm:text-left text-right">{`${o.name.first.toLowerCase()}${o.name.last.toLowerCase()}@gmail.com`}</p>
+                    <p className="text-gray-600 ml-1">{o.date}</p>
 
-                  <div className="flex justify-between items-center">
-                    <p className="text-gray-600 ml-1">{o.method}</p>
-                    <BsThreeDotsVertical />
-                  </div>
-                </li>
-              );
-            })}
+                    <div className="flex justify-between items-center">
+                      <p className="text-gray-600 ml-1">{o.method}</p>
+                      <BsThreeDotsVertical />
+                    </div>
+                  </li>
+                );
+              })}
           </ul>
         </div>
       </div>
@@ -46,4 +66,4 @@ const customers = () => {
   );
 };
 
-export default customers;
+export default Customers;
