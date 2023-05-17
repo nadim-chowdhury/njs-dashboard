@@ -15,7 +15,7 @@ const Sidebar = ({ children }) => {
       <div className="flex sm:flex-col justify-between sm:h-screen p-4 bg-white border sm:fixed sm:top-0 sm:left-0">
         <Link
           href="/"
-          className="sm:text-xl font-bold text-center my-auto sm:my-0 bg-blue-500 text-white rounded-tl-lg rounded-br-lg p-2 mr-2 sm:mr-0"
+          className="sm:text-xl font-bold text-center my-auto sm:my-0 bg-blue-500 text-white rounded-tl-lg rounded-br-lg p-2 mr-2 sm:mr-0 text-sm"
         >
           IIO TM
         </Link>
@@ -54,7 +54,7 @@ const Sidebar = ({ children }) => {
 
         {user ? (
           <div
-            className="flex justify-center bg-blue-500 text-white text-center text-sm sm:text-xl font-bold rounded-tl-lg rounded-br-lg p-2 cursor-pointer ml-2 sm:ml-0 uppercase my-auto sm:my-0"
+            className="sm:text-xl font-bold text-center my-auto sm:my-0 bg-blue-500 text-white rounded-tl-lg rounded-br-lg p-2 ml-2 sm:ml-0 uppercase text-sm"
             onClick={async () => {
               const success = await signOut();
               if (success) {
@@ -67,7 +67,7 @@ const Sidebar = ({ children }) => {
         ) : (
           <Link
             href="/login"
-            className="flex justify-center bg-blue-500 text-white text-center text-sm sm:text-xl font-bold rounded-tl-lg rounded-br-lg p-2 ml-2 sm:ml-0 uppercase my-auto sm:my-0"
+            className="sm:text-xl font-bold text-center my-auto sm:my-0 bg-blue-500 text-white rounded-tl-lg rounded-br-lg p-2 ml-2 sm:ml-0 uppercase text-sm"
           >
             Log In
           </Link>
