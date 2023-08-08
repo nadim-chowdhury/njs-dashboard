@@ -6,6 +6,8 @@
   width: 160px;
   height: 90px;
   margin: 0 auto;
-  border-radius: 8px;
   border: 1px solid #e8e8e8;
+  overflow: hidden;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
 }

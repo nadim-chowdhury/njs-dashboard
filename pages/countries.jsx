@@ -22,7 +22,7 @@ function Countries() {
         <input
           type="text"
           className="rounded-lg p-3 border w-auto focus:outline-blue-400"
-          onChange={(e) => setQuery(e.target.value)}
+          onChange={(e) => setQuery(e.target.value.toLowerCase())}
         />
         <button className="bg-blue-500 text-white p-4 rounded-lg ml-2">
           <BsSearch />
@@ -38,7 +38,7 @@ function Countries() {
           )
           .map((c) => (
             <div key={c.id} className="border bg-white rounded-lg m-4">
-              <div className="countries pt-2">
+              <div className="countries">
                 <Image src={c.flags.png} alt="" width={160} height={90} />
               </div>
               <div className="text-center py-2">

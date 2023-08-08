@@ -4,11 +4,9 @@ export default function CityWeather({ city }) {
       <h3 className="text-3xl font-bold mb-2">{city.name}</h3>
       <div className="flex">
         <p className="w-1/2">
-          {" "}
           <span className=" rounded-r-md  mr-2">Lon:</span> {city.coord?.lon}
         </p>
         <p>
-          {" "}
           <span className=" rounded-r-md  mr-2">Lat:</span> {city.coord?.lat}
         </p>
       </div>
@@ -36,7 +34,6 @@ export default function CityWeather({ city }) {
       </div>
       <div className="flex">
         <p className="w-1/2">
-          {" "}
           <span className=" rounded-r-md  mr-2">Weather:</span>{" "}
           {city.weather?.[0]?.main}
         </p>
