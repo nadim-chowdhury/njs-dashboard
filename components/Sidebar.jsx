@@ -12,7 +12,7 @@ const Sidebar = ({ children }) => {
 
   return (
     <div className="sm:flex">
-      <div className="flex sm:flex-col justify-between sm:h-screen p-4 bg-white border sm:fixed sm:top-0 sm:left-0">
+      <div className="flex sm:flex-col justify-between sm:h-screen p-4 bg-white border sm:fixed sm:top-0 sm:left-0 sticky top-0 z-10">
         <Link
           href="/"
           className="sm:text-xl font-bold text-center my-auto sm:my-0 bg-blue-500 text-white rounded-tl-lg rounded-br-lg p-2 mr-2 sm:mr-0 text-sm"
@@ -20,41 +20,26 @@ const Sidebar = ({ children }) => {
           IIO TM
         </Link>
         <div className="grid grid-cols-5 gap-2 sm:block">
-          <Link
-            href="/"
-            className="hover:bg-blue-500 hover:text-white bg-gray-200 text-2xl font-bold px-1 sm:w-28 py-2 rounded-tl-lg rounded-br-lg flex justify-center my-2 transition duration-300"
-          >
+          <Link href="/" className="navbar_link">
             <AiFillHome />
           </Link>
-          <Link
-            href="/weather"
-            className="hover:bg-blue-500 hover:text-white bg-gray-200 text-2xl font-bold px-1 sm:w-28 py-2 rounded-tl-lg rounded-br-lg flex justify-center my-2 transition duration-300"
-          >
+          <Link href="/weather" className="navbar_link">
             <TiWeatherCloudy />
           </Link>
-          <Link
-            href="/about"
-            className="hover:bg-blue-500 hover:text-white bg-gray-200 text-2xl font-bold px-1 sm:w-28 py-2 rounded-tl-lg rounded-br-lg flex justify-center my-2 transition duration-300"
-          >
+          <Link href="/about" className="navbar_link">
             <AiFillInfoCircle />
           </Link>
-          <Link
-            href="/countries"
-            className="hover:bg-blue-500 hover:text-white bg-gray-200 text-2xl font-bold px-1 sm:w-28 py-2 rounded-tl-lg rounded-br-lg flex justify-center my-2 transition duration-300"
-          >
+          <Link href="/countries" className="navbar_link">
             <TbWorld />
           </Link>
-          <Link
-            href="/customers"
-            className="hover:bg-blue-500 hover:text-white bg-gray-200 text-2xl font-bold px-1 sm:w-28 py-2 rounded-tl-lg rounded-br-lg flex justify-center my-2 transition duration-300"
-          >
+          <Link href="/customers" className="navbar_link">
             <MdPermContactCalendar />
           </Link>
         </div>
 
         {user ? (
           <div
-            className="sm:text-xl font-bold text-center my-auto sm:my-0 bg-blue-500 text-white rounded-tl-lg rounded-br-lg p-2 ml-2 sm:ml-0 uppercase text-sm"
+            className="navbar_button"
             onClick={async () => {
               const success = await signOut();
               if (success) {
@@ -65,10 +50,7 @@ const Sidebar = ({ children }) => {
             Sign Out
           </div>
         ) : (
-          <Link
-            href="/login"
-            className="sm:text-xl font-bold text-center my-auto sm:my-0 bg-blue-500 text-white rounded-tl-lg rounded-br-lg p-2 ml-2 sm:ml-0 uppercase text-sm"
-          >
+          <Link href="/login" className="navbar_button">
             Log In
           </Link>
         )}

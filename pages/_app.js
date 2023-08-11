@@ -1,5 +1,5 @@
 import Sidebar from "@/components/Sidebar";
-import "@/styles/globals.css";
+import "@/styles/globals.scss";
 import { auth } from "@/firebase";
 import { useAuthState } from "react-firebase-hooks/auth";
 
