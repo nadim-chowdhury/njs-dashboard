@@ -23,7 +23,7 @@ export default function Home() {
       <main className="bg-gray-100 pb-4">
         <Header />
         <TopCards />
-        <div className="grid p-4 md:grid-cols-3 grid-cols-1 gap-4">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-4 p-4">
           <BarChart />
           <PieChart />
           <SteppedArea />

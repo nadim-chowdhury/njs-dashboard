@@ -19,3 +19,39 @@
 .navbar_button {
   @apply sm:text-xl font-bold text-center my-auto sm:my-0 bg-blue-500 text-white rounded-tl-lg rounded-br-lg p-2 ml-2 sm:ml-0 uppercase text-sm;
 }
+
+.top_card_div {
+  @apply col-span-1 bg-white flex justify-between w-full border p-4 rounded-lg;
+}
+
+.top_card_g {
+  @apply bg-green-200 flex justify-center items-center p-2 rounded-lg;
+}
+
+.about_h2 {
+  @apply font-medium sm:text-4xl text-3xl text-gray-900;
+}
+
+.about_link {
+  @apply text-xl p-2 text-gray-500 hover:text-blue-500 border-2 rounded-full;
+}
+
+.about_btn {
+  @apply bg-gray-100 inline-flex py-3 px-5 rounded-lg items-center hover:bg-gray-200 focus:outline-none;
+}
+
+.weather_data {
+  @apply bg-blue-100 px-2 rounded-tl-md rounded-br-lg block my-1;
+}
+
+.weather_city {
+  @apply my-4 sm:my-0 sm:mx-4 sm:mt-4;
+}
+
+.auth_input {
+  @apply w-full rounded border border-gray-300 focus:border-blue-500 focus:ring-2 focus:ring-blue-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out;
+}
+
+.auth_btn {
+  @apply text-white bg-blue-500 border-0 py-2 px-6 focus:outline-none hover:bg-blue-600 rounded-tl-lg rounded-br-lg text-lg;
+}

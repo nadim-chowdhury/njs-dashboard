@@ -29,9 +29,7 @@ const Signup = () => {
           </h2>
         ) : (
           <div className="w-80 flex flex-col mt-8">
-            <h2 className="text-white text-center text-xl bg-blue-500 border-0 py-2 px-6 mb-4 rounded-tl-lg rounded-br-lg">
-              Signup Here
-            </h2>
+            <h2 className="auth_btn text-center mb-4">Signup Here</h2>
 
             <div className="relative mb-4">
               <label htmlFor="name" className="leading-7 text-sm text-gray-600">
@@ -42,7 +40,7 @@ const Signup = () => {
                 id="name"
                 name="name"
                 value={name}
-                className="w-full bg-white rounded border border-gray-300 focus:border-blue-500 focus:ring-2 focus:ring-blue-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
+                className="auth_input"
                 onChange={(e) => setName(e.target.value)}
               />
             </div>
@@ -58,7 +56,7 @@ const Signup = () => {
                 id="email"
                 name="email"
                 value={email}
-                className="w-full bg-white rounded border border-gray-300 focus:border-blue-500 focus:ring-2 focus:ring-blue-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
+                className="auth_input"
                 onChange={(e) => setEmail(e.target.value)}
               />
             </div>
@@ -72,18 +70,18 @@ const Signup = () => {
                 id="password"
                 name="password"
                 value={password}
-                className="w-full bg-white rounded border border-gray-300 focus:border-blue-500 focus:ring-2 focus:ring-blue-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
+                className="auth_input"
                 onChange={(e) => setPassword(e.target.value)}
               />
             </div>
 
             <button
-              className="text-white bg-blue-500 border-0 py-2 px-6 focus:outline-none hover:bg-blue-600 rounded-tl-lg rounded-br-lg text-lg"
+              className="auth_btn"
               onClick={() =>
                 createUserWithEmailAndPassword(email, password, name)
               }
             >
-              Register
+              Submit
             </button>
 
             <h4 className="mt-8 border-2 pl-2 py-2 rounded-tl-lg rounded-br-lg">

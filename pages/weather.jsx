@@ -68,74 +68,54 @@ export default function Weather() {
           <div className="">
             <div className="flex">
               <p className="w-1/2">
-                <span className="bg-blue-100 px-2 rounded-tl-md rounded-br-lg block my-1 mr-2">
-                  Lat:
-                </span>
+                <span className="weather_data mr-2">Lat:</span>
                 {city.name ? city.coord?.lat : "No info"}
               </p>
               <p className="w-1/2">
-                <span className="bg-blue-100 px-2 rounded-tl-md rounded-br-lg block my-1">
-                  Lon:
-                </span>
+                <span className="weather_data">Lon:</span>
                 {city.name ? city.coord?.lon : "No info"}
               </p>
             </div>
             <p>
-              <span className="bg-blue-100 px-2 rounded-tl-md rounded-br-lg block my-1">
-                Temp:
-              </span>
+              <span className="weather_data">Temp:</span>
               {city.name ? city.main?.temp : "Search any city for this info"}
             </p>
             <p>
-              <span className="bg-blue-100 px-2 rounded-tl-md rounded-br-lg block my-1">
-                Feels Like:
-              </span>
+              <span className="weather_data">Feels Like:</span>
               {city.name
                 ? city.main?.feels_like
                 : "Search any city for this info"}
             </p>
             <p>
-              <span className="bg-blue-100 px-2 rounded-tl-md rounded-br-lg block my-1">
-                Pressure:
-              </span>
+              <span className="weather_data">Pressure:</span>
               {city.name
                 ? city.main?.pressure
                 : "Search any city for this info"}
             </p>
             <p>
-              <span className="bg-blue-100 px-2 rounded-tl-md rounded-br-lg block my-1">
-                Humidity:
-              </span>
+              <span className="weather_data">Humidity:</span>
               {city.name
                 ? city.main?.humidity
                 : "Search any city for this info"}
             </p>
             <p>
-              <span className="bg-blue-100 px-2 rounded-tl-md rounded-br-lg block my-1">
-                Weather:
-              </span>
+              <span className="weather_data">Weather:</span>
               {city.name
                 ? city.weather?.[0]?.main
                 : "Search any city for this info"}
             </p>
             <p>
-              <span className="bg-blue-100 px-2 rounded-tl-md rounded-br-lg block my-1">
-                Visibility:
-              </span>
+              <span className="weather_data">Visibility:</span>
               {city.name ? city.visibility : "Search any city for this info"}
             </p>
             <p>
-              <span className="bg-blue-100 px-2 rounded-tl-md rounded-br-lg block my-1">
-                Sunrise:
-              </span>
+              <span className="weather_data">Sunrise:</span>
               {city.name
                 ? new Date(city.sys?.sunrise * 1000).toLocaleTimeString()
                 : "Search any city for this info"}
             </p>
             <p>
-              <span className="bg-blue-100 px-2 rounded-tl-md rounded-br-lg block my-1">
-                Sunset:
-              </span>
+              <span className="weather_data">Sunset:</span>
               {city.name
                 ? new Date(city.sys?.sunset * 1000).toLocaleTimeString()
                 : "Search any city for this info"}
@@ -148,11 +128,11 @@ export default function Weather() {
             <CityWeather city={city1} />
           </div>
 
-          <div className="my-4 sm:my-0 sm:mx-4 sm:mt-4">
+          <div className="weather_city">
             <CityWeather city={city2} />
           </div>
 
-          <div className="my-4 sm:my-0 sm:mx-4 sm:mt-4">
+          <div className="weather_city">
             <CityWeather city={city3} />
           </div>
         </div>

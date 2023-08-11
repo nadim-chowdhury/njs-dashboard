@@ -50,27 +50,19 @@ const about = () => {
           <div className="container px-5 pt-24 pb-6 mx-auto">
             <div className="flex flex-wrap -m-4 text-center">
               <div className="p-4 sm:w-1/4 w-1/2">
-                <h2 className="title-font font-medium sm:text-4xl text-3xl text-gray-900">
-                  2.7K
-                </h2>
+                <h2 className="about_h2">2.7K</h2>
                 <p className="leading-relaxed">Users</p>
               </div>
               <div className="p-4 sm:w-1/4 w-1/2">
-                <h2 className="title-font font-medium sm:text-4xl text-3xl text-gray-900">
-                  1.8K
-                </h2>
+                <h2 className="about_h2">1.8K</h2>
                 <p className="leading-relaxed">Subscribes</p>
               </div>
               <div className="p-4 sm:w-1/4 w-1/2">
-                <h2 className="title-font font-medium sm:text-4xl text-3xl text-gray-900">
-                  35
-                </h2>
+                <h2 className="about_h2">35</h2>
                 <p className="leading-relaxed">Downloads</p>
               </div>
               <div className="p-4 sm:w-1/4 w-1/2">
-                <h2 className="title-font font-medium sm:text-4xl text-3xl text-gray-900">
-                  4
-                </h2>
+                <h2 className="about_h2">4</h2>
                 <p className="leading-relaxed">Products</p>
               </div>
             </div>
@@ -85,19 +77,19 @@ const about = () => {
           <div className="flex justify-center">
             <Link
               href="https://www.linkedin.com/in/nadim-chowdhury"
-              className="text-xl p-2 text-gray-500 hover:text-blue-500 border-2 rounded-full"
+              className="about_link"
             >
               <BsLinkedin />
             </Link>
             <Link
               href="https://github.com/nadim-chowdhury"
-              className="text-xl p-2 text-gray-500 hover:text-blue-500 border-2 rounded-full"
+              className="about_link"
             >
               <BsGithub />
             </Link>
             <Link
               href="https://twitter.com/nadim_ch0wdhury"
-              className="text-xl p-2 text-gray-500 hover:text-blue-500 border-2 rounded-full"
+              className="about_link"
             >
               <BsTwitter />
             </Link>
@@ -115,7 +107,7 @@ const about = () => {
               </h1>
             </div>
             <div className="flex md:ml-auto md:mr-0 mx-auto items-center flex-shrink-0 space-x-4">
-              <button className="bg-gray-100 inline-flex py-3 px-5 rounded-lg items-center hover:bg-gray-200 focus:outline-none">
+              <button className="about_btn">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   fill="currentColor"
@@ -129,7 +121,7 @@ const about = () => {
                   <span className="title-font font-medium">Google Play</span>
                 </span>
               </button>
-              <button className="bg-gray-100 inline-flex py-3 px-5 rounded-lg items-center hover:bg-gray-200 focus:outline-none">
+              <button className="about_btn">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   fill="currentColor"

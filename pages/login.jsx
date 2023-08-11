@@ -29,9 +29,7 @@ const Login = () => {
           </h2>
         ) : (
           <div className="w-80 flex flex-col mt-8">
-            <h2 className="text-white text-center text-xl bg-blue-500 border-0 py-2 px-6 mb-4 rounded-tl-lg rounded-br-lg">
-              Sign in Here
-            </h2>
+            <h2 className="auth_btn text-center mb-4">Log in Here</h2>
 
             <div className="relative mb-4">
               <label
@@ -44,7 +42,7 @@ const Login = () => {
                 type="email"
                 id="email"
                 name="email"
-                className="w-full rounded border border-gray-300 focus:border-blue-500 focus:ring-2 focus:ring-blue-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
+                className="auth_input"
                 onChange={(e) => setEmail(e.target.value)}
               />
             </div>
@@ -56,24 +54,21 @@ const Login = () => {
                 type="password"
                 id="password"
                 name="password"
-                className="w-full rounded border border-gray-300 focus:border-blue-500 focus:ring-2 focus:ring-blue-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
+                className="auth_input"
                 onChange={(e) => setPassword(e.target.value)}
               />
             </div>
 
             <button
-              className="text-white bg-blue-500 border-0 py-2 px-6 focus:outline-none hover:bg-blue-600 rounded-tl-lg rounded-br-lg text-lg"
+              className="auth_btn"
               onClick={() => signInWithEmailAndPassword(email, password)}
             >
-              Sign in
+              Submit
             </button>
 
             <h3 className="my-4 leading-7 text-md text-gray-600">Or</h3>
 
-            <button
-              className="text-white bg-blue-500 border-0 py-2 px-6 focus:outline-none hover:bg-blue-600 rounded-tl-lg rounded-br-lg text-lg"
-              onClick={() => signInWithGoogle()}
-            >
+            <button className="auth_btn" onClick={() => signInWithGoogle()}>
               Sign in With Google
             </button>
 
