@@ -45,11 +45,11 @@ export default function CityWeather({ city }) {
       <div className="flex">
         <p className="w-1/2">
           <span className=" rounded-r-md  mr-2">Sunrise:</span>
-          {city.sys?.sunrise}
+          {new Date(city.sys?.sunrise * 1000).toLocaleTimeString()}
         </p>
         <p>
           <span className=" rounded-r-md  mr-2">Sunset:</span>
-          {city.sys?.sunset}
+          {new Date(city.sys?.sunset * 1000).toLocaleTimeString()}
         </p>
       </div>
     </div>

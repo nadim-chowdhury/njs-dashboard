@@ -37,7 +37,7 @@ function Countries() {
               : i.name.common.toLowerCase().includes(query)
           )
           .map((c) => (
-            <div key={c.id} className="border bg-white rounded-lg m-4">
+            <div key={Math.random()} className="border bg-white rounded-lg m-4">
               <div className="countries">
                 <Image src={c.flags.png} alt="" width={160} height={90} />
               </div>

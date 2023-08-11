@@ -128,13 +128,17 @@ export default function Weather() {
               <span className="bg-blue-100 px-2 rounded-tl-md rounded-br-lg block my-1">
                 Sunrise:
               </span>
-              {city.name ? city.sys?.sunrise : "Search any city for this info"}
+              {city.name
+                ? new Date(city.sys?.sunrise * 1000).toLocaleTimeString()
+                : "Search any city for this info"}
             </p>
             <p>
               <span className="bg-blue-100 px-2 rounded-tl-md rounded-br-lg block my-1">
                 Sunset:
               </span>
-              {city.name ? city.sys?.sunset : "Search any city for this info"}
+              {city.name
+                ? new Date(city.sys?.sunset * 1000).toLocaleTimeString()
+                : "Search any city for this info"}
             </p>
           </div>
         </div>
