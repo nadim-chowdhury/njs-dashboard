@@ -1,6 +1,6 @@
 const TopCards = () => {
   return (
-    <div className="grid grid-cols-3 gap-4 p-4">
+    <div className="grid md:grid-cols-3 gap-4 p-4">
       <div className="top_card_div">
         <div className="flex flex-col w-full pb-4">
           <p className="text-xl font-bold">$16,894</p>
